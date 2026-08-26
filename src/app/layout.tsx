@@ -19,6 +19,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Agentic Chat",
   description: "Bring your own key. Agentic chat with charts, flows, and data tools.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Agentic Chat",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
