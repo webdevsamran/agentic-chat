@@ -87,7 +87,7 @@ export function DataTable({ table }: { table: ParsedTable }) {
         )
       }
     >
-      <div className="max-h-72 overflow-auto">
+      <div className="scroll-thin max-h-72 overflow-x-auto overflow-y-auto">
         <table className="w-full text-left text-dense">
           <thead className="sticky top-0 bg-bg-elevated">
             <tr>

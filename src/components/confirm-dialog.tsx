@@ -88,13 +88,13 @@ export function ConfirmDialog({
           </>
         )}
 
-        <div className="mt-4 flex justify-end gap-2">
+        <div className="mt-5 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
           <button
             ref={cancelRef}
             type="button"
             onClick={onCancel}
             disabled={pending}
-            className="rounded-lg px-3 py-2 text-dense text-text-muted hover:text-text disabled:opacity-40"
+            className="flex min-h-[40px] items-center justify-center rounded-lg px-3 py-2 text-dense text-text-muted hover:text-text disabled:opacity-40"
           >
             Cancel
           </button>
@@ -102,7 +102,7 @@ export function ConfirmDialog({
             type="button"
             disabled={!ready}
             onClick={onConfirm}
-            className={`rounded-lg px-3.5 py-2 text-dense font-medium hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 ${
+            className={`flex min-h-[40px] items-center justify-center rounded-lg px-3.5 py-2 text-dense font-medium hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 ${
               tone === "danger" ? "bg-danger text-bg" : "bg-accent text-accent-text"
             }`}
           >

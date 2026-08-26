@@ -338,11 +338,14 @@ export function Chat({
         <button
           type="button"
           onClick={() => setSettingsOpen(true)}
-          className="key-pill flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-dense transition-colors"
+          className="key-pill flex shrink-0 items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-dense transition-colors"
         >
           <IconKey size={12} />
-          <span data-when="key">Connected</span>
-          <span data-when="no-key">Add API key</span>
+          <span data-when="key" className="hidden sm:inline">Connected</span>
+          <span data-when="no-key">
+            <span className="hidden sm:inline">Add API key</span>
+            <span className="sm:hidden">Add key</span>
+          </span>
         </button>
       </header>
 

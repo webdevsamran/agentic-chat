@@ -60,7 +60,7 @@ export function ShareButton({
   };
 
   return (
-    <div className="relative">
+    <div className="relative shrink-0">
       <button
         ref={triggerRef}
         type="button"
@@ -75,7 +75,7 @@ export function ShareButton({
         }`}
       >
         <IconShare size={12} />
-        {shareId ? "Shared" : "Share"}
+        <span className="hidden sm:inline">{shareId ? "Shared" : "Share"}</span>
       </button>
 
       {open && (
@@ -83,7 +83,7 @@ export function ShareButton({
           ref={panelRef}
           role="dialog"
           aria-label="Share this chat"
-          className="absolute right-0 top-full z-30 mt-1.5 w-80 rounded-xl border border-border bg-surface-raised p-3 shadow-xl"
+          className="absolute right-0 top-full z-30 mt-1.5 w-[calc(100vw-2rem)] max-w-xs sm:w-80 rounded-xl border border-border bg-surface-raised p-3 shadow-xl"
         >
           <h3 className="text-dense font-medium text-text">Share this chat</h3>
           <p className="mt-1 text-micro leading-relaxed text-text-faint">
